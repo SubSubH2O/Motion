@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lightGray: #6e6e6e;
+  --color-lime: #bcfd4c;
+  /* --color-lightGreen: #6bb77b; */
+}
+
+@layer base {
+  body {
+    @apply bg-lightGray relative font-sans h-screen overflow-x-hidden text-white
+  }
+}
