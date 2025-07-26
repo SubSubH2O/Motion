@@ -7,10 +7,10 @@ app.use(cors());
 app.use(express.json());
 
 // register and login routes
-app.use("/auth", require("./src/routes/jwtAuth"))
+app.use("/api/v1/auth", require("./src/routes/authRoutes"))
 
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

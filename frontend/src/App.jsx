@@ -15,11 +15,12 @@ import Sidebar from "./components/Sidebar"
 function App() {
 
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  const showLayout = location.pathname !== "/";
 
   return (
     <main>
-      <Header onSidebarToggle={() => setSidebarOpen(!sidebarOpen)}/>
-      <Sidebar isOpen={sidebarOpen}/>
+      {showLayout && <Header onSidebarToggle={() => setSidebarOpen(!sidebarOpen)}/>}
+      {showLayout && <Sidebar isOpen={sidebarOpen}/>}
       <Routes>
         <Route path="/" element={<LandingPage/>}/>
         <Route path="/home" element={<HomePage/>}>

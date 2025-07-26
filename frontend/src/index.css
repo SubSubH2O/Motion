@@ -8,6 +8,9 @@
 
 @layer base {
   body {
-    @apply bg-lightGray relative font-sans h-screen overflow-x-hidden text-white
+    @apply relative font-sans h-screen overflow-x-hidden text-black
+  }
+  input {
+    @apply border border-black
   }
 }
